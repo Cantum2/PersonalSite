@@ -1,14 +1,18 @@
 import React, {Component} from 'react';
 import '../App.css'
-import  About  from "../components/About.js";
+import  Social  from "../components/Social.js";
+import About from "../components/About.js"
+import Projects from "../components/Projects.js"
 
 class App extends Component {
     render() {
         return(
-            <div>
+            <div class="backgroundColor">
                 <h1 align="center" className="nameHeader">Marcus Cantu</h1>
-                <h2 align="center">Software Developer</h2>
-                <About/>
+                <h2 align="center" className="nameHeader">Software Developer</h2>
+                <Social />
+                <About />
+                <Projects />
             </div>
         )
     }

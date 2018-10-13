@@ -8,6 +8,24 @@ h1{
     margin-bottom: 0%;
 }
 
-.titleHeader{
-    margin-left: 10%; 
+.fiveRight{
+    margin-right: 5px;
+}
+
+.fiveTop{
+    margin-top: 5px;
+}
+
+.backgroundColor{
+    background-color: lightblue;
+}
+
+.socialBackground{
+    background-color: white;
+}
+
+
+body{
+    background-color: lightblue;
+
 }

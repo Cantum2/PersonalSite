@@ -7,7 +7,7 @@ import Projects from "../components/Projects.js"
 class App extends Component {
     render() {
         return(
-            <div class="backgroundColor">
+            <div className="backgroundColor">
                 <h1 align="center" className="nameHeader">Marcus Cantu</h1>
                 <h2 align="center" className="nameHeader">Software Developer</h2>
                 <Social />

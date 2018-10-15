@@ -19,7 +19,14 @@ let projectsArr = [
     platform: "Web Application and Blockchain",
     technologiesUsed: "AngularJS, TCR, TCR-UI, Git, NodeJS, Express ",
     description: "Social media platform"
+  },
+  {
+    name: "This website",
+    platform: "Website",
+    technologiesUsed: "React",
+    description: "Portfolio website."
   }
+  
 ];
 
  class Project extends Component {
@@ -32,8 +39,14 @@ let projectsArr = [
             <ProjectsCard key={proj.name}>
               <ProjectCardDetail>
                 {proj.name}
+              </ProjectCardDetail>
+              <ProjectCardDetail>
                 {proj.platform}
+              </ProjectCardDetail>
+              <ProjectCardDetail>
                 Technologies Used: {proj.technologiesUsed}
+              </ProjectCardDetail>
+              <ProjectCardDetail>
                 {proj.description}
               </ProjectCardDetail>
             </ProjectsCard>

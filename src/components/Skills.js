@@ -7,7 +7,7 @@ const data = {
     datasets: [
       {
         label: 'Programming Languages',
-        backgroundColor: 'rgba(245,245,245,0.2)',
+        backgroundColor: 'hsl(0, 61%, 87%)',
         borderColor: 'rgba(255,99,132,1)',
         borderWidth: 1,
         hoverBackgroundColor: 'rgba(245,245,245,0.4)',
@@ -31,7 +31,7 @@ const SkillsContainer = styled.div`
 margin: 0;
 padding: 1.5em;
 background: hsl(0, 61%, 50%);
-color: whitesmoke;
+// color: whitesmoke;
 div{
     background-color: whitesmoke;
     border-radius: 10px;

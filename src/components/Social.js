@@ -1,5 +1,6 @@
 import React from "react";
 import { FlexContainer } from "./Project";
+import "../App.css";
 
 const Social = () => {
   let linkedInPicUrl = "https://cdn3.iconfinder.com/data/icons/free-social-icons/67/linkedin_circle_black-512.png";
@@ -8,13 +9,13 @@ const Social = () => {
   return (
     <FlexContainer style={{ justifyContent: "center" }}>
       <li>
-        <img src={linkedInPicUrl} height="42" width="42" />
+          <img src={linkedInPicUrl} height="42" width="42" className="grow"/>
       </li>
       <li>
-        <img src={gitHubPicUrl} height="42" width="42" className="fiveRight" />
+        <img src={gitHubPicUrl} height="42" width="42" className="grow" />
       </li>
       <li>
-        <img src={gmailPicUrl} height="42" width="42" />
+        <img src={gmailPicUrl} height="42" width="42" className="grow"/>
       </li>
     </FlexContainer>
   );

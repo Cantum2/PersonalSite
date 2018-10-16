@@ -6,9 +6,7 @@ const Header = () => (
   <HeaderContainer>
     <div>
       <h1>Marcus Cantu</h1>
-      {/* maybe add a bit more than just software developer */}
          <h2>Software Developer</h2>
-         {/* I know these are off centered a bit, my b */}
       <Social />
     </div>
   </HeaderContainer>
@@ -23,7 +21,10 @@ const HeaderContainer = styled.div`
   background: whitesmoke;
   color: hsl(0, 61%, 50%);
   padding: 1em;
-
+  margin-top: 0 !important;
+  h1{
+      font-size: 10em;
+  }
   div {
      justify-content: center;
      margin: 0 auto;

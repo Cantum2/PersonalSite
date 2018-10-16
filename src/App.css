@@ -1,31 +1,7 @@
-h1{
-    font-size: 200px;
-    font-weight: bold;
-    font-family: 'Source Sans Pro', sans-serif;
-}
+@import url("https://fonts.googleapis.com/css?family=Fira+Sans|Montserrat");
 
-.nameHeader{
-    margin-bottom: 0%;
-}
-
-.fiveRight{
-    margin-right: 5px;
-}
-
-.fiveTop{
-    margin-top: 5px;
-}
-
-.backgroundColor{
-    background-color: lightblue;
-}
-
-.socialBackground{
-    background-color: white;
-}
-
-
-body{
-    background-color: lightblue;
-
-}
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Fira Sans", sans-serif;
+} 

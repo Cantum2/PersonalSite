@@ -1,4 +1,4 @@
-import React, { Fragment } from "react";
+import React, { Fragment, Component } from "react";
 import styled from "styled-components";
 
 let projectsArr = [
@@ -28,14 +28,22 @@ let projectsArr = [
     description: "Portfolio website."
   }
 ];
-function openProjectDetail(){
-  console.log("Button working");
-}
-const Project = () => (
+
+
+export default class Project extends Component {
+  openProjectDetail = key => {
+    console.log("Button working:");
+  };
+   
+  render() {
+    return (
       <Fragment>
         <FlexContainer>
           {projectsArr.map(proj => (
-            <ProjectsCard key={proj.name} onClick={openProjectDetail}>
+            <ProjectsCard
+              key={proj.name}
+              onClick={this.openProjectDetail}
+            >
               <p>{proj.name}</p>
               <p>{proj.platform}</p>
               <p>Technologies Used: {proj.technologiesUsed}</p>
@@ -45,8 +53,8 @@ const Project = () => (
         </FlexContainer>
       </Fragment>
     );
-
-export default Project;
+  }
+}
 
 export const FlexContainer = styled.div`
   display: flex;

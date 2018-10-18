@@ -28,12 +28,14 @@ let projectsArr = [
     description: "Portfolio website."
   }
 ];
-
+function openProjectDetail(){
+  console.log("Button working");
+}
 const Project = () => (
       <Fragment>
         <FlexContainer>
           {projectsArr.map(proj => (
-            <ProjectsCard key={proj.name}>
+            <ProjectsCard key={proj.name} onClick={openProjectDetail}>
               <p>{proj.name}</p>
               <p>{proj.platform}</p>
               <p>Technologies Used: {proj.technologiesUsed}</p>

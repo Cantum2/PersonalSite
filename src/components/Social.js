@@ -9,13 +9,13 @@ const Social = () => {
   return (
     <FlexContainer style={{ justifyContent: "center" }}>
       <li>
-          <img src={linkedInPicUrl} height="42" width="42" className="grow"/>
+          <a href="https://www.linkedin.com/in/marcus-cantu-a0b569131/"><img src={linkedInPicUrl} height="42" width="42" className="grow"/></a>
       </li>
       <li>
-        <img src={gitHubPicUrl} height="42" width="42" className="grow" />
+        <a href="https://github.com/Cantum2"><img src={gitHubPicUrl} height="42" width="42" className="grow" /></a>
       </li>
       <li>
-        <img src={gmailPicUrl} height="42" width="42" className="grow"/>
+        <a href="mailto:cantumarcus19@gmail.com" target="_top"> <img src={gmailPicUrl} height="42" width="42" className="grow"/></a>
       </li>
     </FlexContainer>
   );

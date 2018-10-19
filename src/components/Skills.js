@@ -1,6 +1,8 @@
 import React, { Component }from "react";
 import styled from "styled-components";
 import {HorizontalBar} from "react-chartjs-2";
+import {Router, Link} from "@reach/router"
+
 import '../App.css'
 const programmingLanguageData = {
     labels: ['','Java', 'JavaScript', 'Python', 'Matlab', 'MySQL', 'HTML5'],

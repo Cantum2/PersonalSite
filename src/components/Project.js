@@ -1,5 +1,6 @@
 import React, { Fragment, Component } from "react";
 import styled from "styled-components";
+import {Router, Link} from "@reach/router"
 
 let projectsArr = [
   {
@@ -32,7 +33,7 @@ let projectsArr = [
 
 export default class Project extends Component {
   openProjectDetail = key => {
-    console.log("Button working:");
+    console.log("Button working:" + key);
   };
    
   render() {
@@ -42,7 +43,7 @@ export default class Project extends Component {
           {projectsArr.map(proj => (
             <ProjectsCard
               key={proj.name}
-              onClick={this.openProjectDetail}
+              onClick={(e) => this.openProjectDetail(proj.name)}
             >
               <p>{proj.name}</p>
               <p>{proj.platform}</p>

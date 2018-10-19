@@ -43,7 +43,7 @@ export default class Project extends Component {
           {projectsArr.map(proj => (
             <ProjectsCard
               key={proj.name}
-              onClick={(e) => this.openProjectDetail(proj.name)}
+              onClick={() => this.openProjectDetail(proj.name)}
             >
               <p>{proj.name}</p>
               <p>{proj.platform}</p>

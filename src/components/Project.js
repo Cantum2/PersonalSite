@@ -1,7 +1,7 @@
 import React, { Fragment, Component } from "react";
 import styled from "styled-components";
 import {Router, Link} from "@reach/router"
-
+import ProjectInsight from "./ProjectInsight"
 let projectsArr = [
   {
     name: "Tapt",
@@ -40,17 +40,22 @@ export default class Project extends Component {
     return (
       <Fragment>
         <FlexContainer>
-          {projectsArr.map(proj => (
-            <ProjectsCard
-              key={proj.name}
-              onClick={() => this.openProjectDetail(proj.name)}
-            >
-              <p>{proj.name}</p>
-              <p>{proj.platform}</p>
-              <p>Technologies Used: {proj.technologiesUsed}</p>
-              <p>{proj.description}</p>
-            </ProjectsCard>
-          ))}
+          <Router>
+            <ProjectInsight path="projins" />
+          </Router> 
+            {projectsArr.map(proj => (
+              <Link to="projins">
+                <ProjectsCard
+                  key={proj.name}
+                  onClick={() => this.openProjectDetail(proj.name)}
+                >
+                  <p>{proj.name}</p>
+                  <p>{proj.platform}</p>
+                  <p>Technologies Used: {proj.technologiesUsed}</p>
+                  <p>{proj.description}</p>
+                </ProjectsCard>
+              </Link>
+            ))}
         </FlexContainer>
       </Fragment>
     );

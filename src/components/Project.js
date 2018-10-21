@@ -41,20 +41,20 @@ export default class Project extends Component {
       <Fragment>
         <FlexContainer>
           <Router>
-            <ProjectInsight path="projins" />
+            <ProjectInsight path="/projins" />
           </Router> 
             {projectsArr.map(proj => (
-              <Link to="projins">
-                <ProjectsCard
+              <ProjectsCard
                   key={proj.name}
                   onClick={() => this.openProjectDetail(proj.name)}
                 >
+              <Link to="/projins">
                   <p>{proj.name}</p>
                   <p>{proj.platform}</p>
                   <p>Technologies Used: {proj.technologiesUsed}</p>
                   <p>{proj.description}</p>
-                </ProjectsCard>
               </Link>
+                </ProjectsCard>
             ))}
         </FlexContainer>
       </Fragment>

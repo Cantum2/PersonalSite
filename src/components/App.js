@@ -1,16 +1,13 @@
-import React, { Fragment } from "react";
+import { Router } from "@reach/router";
+import React from "react";
 import "../App.css";
-import About from "./About.js";
-import Projects from "./Projects.js";
-import Header from "./Header";
-import Skills from "./Skills";
+import HomePage from "./HomePage";
+import ProjectInsight from "./ProjectInsight";
 const App = () => (
-  <Fragment>
-    <Header />
-    <About />
-    <Projects />
-    <Skills />
-  </Fragment>
-); 
+  <Router>
+    <HomePage path="/" />
+    <ProjectInsight path="/projins" />
+  </Router>
+);
 
 export default App;

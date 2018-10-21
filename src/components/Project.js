@@ -1,7 +1,8 @@
 import React, { Fragment, Component } from "react";
 import styled from "styled-components";
-import {Router, Link} from "@reach/router"
-import ProjectInsight from "./ProjectInsight"
+import  {Router, Link} from "@reach/router";
+import ProjectInsight from "./ProjectInsight";
+
 let projectsArr = [
   {
     name: "Tapt",
@@ -35,14 +36,11 @@ export default class Project extends Component {
   openProjectDetail = key => {
     console.log("Button working:" + key);
   };
-   
+
   render() {
     return (
       <Fragment>
         <FlexContainer>
-          <Router>
-            <ProjectInsight path="/projins" />
-          </Router> 
             {projectsArr.map(proj => (
               <ProjectsCard
                   key={proj.name}

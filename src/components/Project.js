@@ -46,7 +46,7 @@ export default class Project extends Component {
                   key={proj.name}
                   onClick={() => this.openProjectDetail(proj.name)}
                 >
-              <Link to="/projins">
+              <Link to={"/project-insight/" + proj.name}>
                   <p>{proj.name}</p>
                   <p>{proj.platform}</p>
                   <p>Technologies Used: {proj.technologiesUsed}</p>

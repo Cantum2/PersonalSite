@@ -6,7 +6,7 @@ import ProjectInsight from "./ProjectInsight";
 const App = () => (
   <Router>
     <HomePage path="/" />
-    <ProjectInsight path="/projins" />
+    <ProjectInsight path="/project-insight/:name" />
   </Router>
 );
 

@@ -1,22 +1,13 @@
 import React, { Component } from 'react';
 
-class ProjectInsight extends Component {
+export default class ProjectInsight extends Component {
     render() {
         return (
             <div>
-                <h1>Test</h1>
-                <h1>Test</h1>
-                <h1>Test</h1>
-                <h1>Test</h1>
-                <h1>Test</h1>
-                <h1>Test</h1>
-                <h1>Test</h1>
-                <h1>Test</h1>
-                <h1>Test</h1>
-                <h1>Test</h1>
+               {this.props.name}
             </div>
         )
     }
 };
 
-export default ProjectInsight;
+

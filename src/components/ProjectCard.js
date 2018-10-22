@@ -1,6 +1,5 @@
 import styled from "styled-components";
 
-// https://codepen.io/MarioDesigns/pen/woJgeo
 export default styled.div`
 width: 250px;
 height: 400px;

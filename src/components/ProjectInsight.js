@@ -11,10 +11,14 @@ export default class ProjectInsight extends Component {
         this.setState({loading: true});
         console.log("Will Mount" + this.state.loading);
         
-    }
+    };
     
     componentDidMount(){
       setTimeout(() => this.setState({loading: false}), 2000);
+    };
+
+    nameOfFunction = () => {
+        console.log("Testing");
     }
 
     render() {
@@ -24,12 +28,20 @@ export default class ProjectInsight extends Component {
             loading ? 
            <LoadingIcon />  :
              <div>
-                {this.props.name}
+                 <ProjectInsightComp>
+                    {this.props.name}
+                 </ProjectInsightComp>
              </div>
         )
     }
 };
 
+
+const ProjectInsightComp = styled.div`
+font-size: 15em;
+color: hsl(0, 61%, 50%);
+
+`
 
 
 

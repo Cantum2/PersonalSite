@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import LoadingIcon from "./LoadingIcon"
 import styled from "styled-components";
 import {Router, Link} from "@reach/router"
+import Particles from 'react-particles-js';
+
 export default class ProjectInsight extends Component {
     state = {
         loading: true
@@ -59,22 +61,61 @@ export default class ProjectInsight extends Component {
         
         return (
             loading ? 
-           <LoadingIcon />  :
-             <Wrap>
-                 <ProjectInsightComp>
-                   <h1>{this.props.name}</h1>
-                   <h2>Description: {currentProjectData.description}</h2>
-                   <h2>Description: {currentProjectData.description}</h2>
-                   <h2>Platform: {currentProjectData.platform}</h2>
-                   <h2>Technologies Used: {currentProjectData.technologiesUsed}</h2>
-                   <h2>What Did I learn: {currentProjectData.whatDidILearn}</h2>
-                   <h2>What to improve: {currentProjectData.whatToImprove}</h2>
-                   <h2>Link: <a href={currentProjectData.description}>{this.props.name}</a></h2>
-                 </ProjectInsightComp>
-                 <Link to="/">
-                    Back home
-                 </Link>
-             </Wrap>
+           <div>
+               <LoadingIcon /> 
+               <Particles 
+              params={{
+            		particles: {
+            			line_linked: {
+            				shadow: {
+            					enable: true,
+            					color: "#3CA9D1",
+            					blur: 5
+            				}
+            			}
+            		}
+            	}}
+              style={{
+                width: '100%',
+                background: 'whitesmoke'
+              }}
+            />
+            </div> :
+            <div>
+                <Wrap>
+                    <ProjectInsightComp>
+                    <h1>{this.props.name}</h1>
+                    <h2>Description: {currentProjectData.description}</h2>
+                    <h2>Platform: {currentProjectData.platform}</h2>
+                    <h2>Technologies Used: {currentProjectData.technologiesUsed}</h2>
+                    <h2>What Did I learn: {currentProjectData.whatDidILearn}</h2>
+                    <h2>What to improve: {currentProjectData.whatToImprove}</h2>
+                    <h2>Link: <a href={currentProjectData.description}>{this.props.name}</a></h2>
+                    </ProjectInsightComp>
+                    <Link to="/">
+                        Back home
+                    </Link>
+                </Wrap>
+                <Particles 
+                params={{
+                        particles: {
+                            line_linked: {
+                                shadow: {
+                                    enable: true,
+                                    color: "black",
+                                    blur: 5
+                                }
+                            }
+                        }
+                    }}
+                style={{
+                    width: '100%',
+                    height:'100%',
+                    background: 'whitesmoke',
+                    position: 'absolute'
+                }}
+                />
+            </div>
         )
     }
 };
@@ -98,6 +139,8 @@ margin-right: auto;
 background:hsl(0, 61%, 50%);
 border-radius: 10px;
 padding: 5px;
+position: absolute;
+z-index: 10;
 `
 
 

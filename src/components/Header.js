@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import Social from "./Social.js";
+import Particles from 'react-particles-js';
 
 const Header = () => (
   <HeaderContainer>

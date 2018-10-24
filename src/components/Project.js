@@ -53,7 +53,7 @@ export default class Project extends Component {
                   <p>{proj.description}</p>
               </Link>
                 </ProjectsCard>
-            ))}
+            ))}         
         </FlexContainer>
       </Fragment>
     );

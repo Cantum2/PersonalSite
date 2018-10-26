@@ -42,10 +42,8 @@ export default class ProjectInsight extends Component {
                 <h2>Platform: {platform}</h2>
                 <h2>Technologies Used: {technologiesUsed}</h2>
                  <h2>What Did I learn: {whatDidILearn}</h2> 
-                {/* <h2>What to improve: {whatToImprove}</h2> */}
-                {/* <h2>
-                  Link: <a href={linkToProj}>{name}</a>
-                </h2> */}
+                 <h2>What to improve: {whatToImprove}</h2>
+                 <h2> Link: <a href={linkToProj}>{name}</a></h2>
               </ProjectInsightComp>
               <Link to="/">Back home</Link>
             </Wrap>

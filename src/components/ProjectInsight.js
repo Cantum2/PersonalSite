@@ -1,124 +1,59 @@
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
 import LoadingIcon from "./LoadingIcon"
 import styled from "styled-components";
 import {Router, Link} from "@reach/router"
-import Particles from 'react-particles-js';
 
 export default class ProjectInsight extends Component {
     state = {
-        loading: true
+      project: {},
+      loading: true
+    };
+  
+    componentDidMount() {
+      const { projects, name } = this.props;
+  
+      const project = projects.filter(project => project.name === name);
+      setTimeout(() => this.setState({ loading: false }), 500);
+  
+      this.setState({
+        project: project[0]
+      });
     }
-
-    componentWillMount(){
-        this.setState({loading: true});
-        console.log("Will Mount" + this.state.loading);
-        
-    };
-    
-    componentDidMount(){
-      setTimeout(() => this.setState({loading: false}), 500);
-    };
-
-    
     render() {
-        const currentProjectData =   {
-            name: "",
-            platform: "",
-            technologiesUsed: "",
-            description: "",
-            whatDidILearn: "",
-            linkToProj: "",
-            whatToImprove: ""
-        }
-        this.initProject = () => {
-           switch (this.props.name) {
-                case "Fitter":
-                    currentProjectData.name = this.props.name;
-                    currentProjectData.platform = "Web Application";
-                    currentProjectData.technologiesUsed = "AngularJS, NodeJS, Express, Firebase";
-                    currentProjectData.description = "Allows for people in the fitness "+
-                    "community to connect while serving as an “All-in-One” fitness tool. " +
-                    "Fitter allows people to find trainers, pay trainers, log calories," +
-                    "log workouts, log progress for specific movements, view workouts from " + 
-                    "their trainer, view diets from their trainer and look at a workout of " +
-                     "the day.";
-                     currentProjectData.whatDidILearn = "Enter Stuff";
-                     currentProjectData.linkToProj = "link"
-                     currentProjectData.whatToImprove = "enter information";
-
-                   console.log("Fitter")
-                   break;
-                case "Tapt":
-                    console.log("Tapt");
-                    break;
-               default:
-                   break;
-           }
-        }
-        this.initProject();
-
-        const {loading} = this.state;
-        
-        return (
-            loading ? 
-           <div>
-               <LoadingIcon /> 
-               <Particles 
-              params={{
-            		particles: {
-            			line_linked: {
-            				shadow: {
-            					enable: true,
-            					color: "#3CA9D1",
-            					blur: 5
-            				}
-            			}
-            		}
-            	}}
-              style={{
-                width: '100%',
-                background: 'whitesmoke'
-              }}
-            />
-            </div> :
-            <div>
-                <Wrap>
-                    <ProjectInsightComp>
-                    <h1>{this.props.name}</h1>
-                    <h2>Description: {currentProjectData.description}</h2>
-                    <h2>Platform: {currentProjectData.platform}</h2>
-                    <h2>Technologies Used: {currentProjectData.technologiesUsed}</h2>
-                    <h2>What Did I learn: {currentProjectData.whatDidILearn}</h2>
-                    <h2>What to improve: {currentProjectData.whatToImprove}</h2>
-                    <h2>Link: <a href={currentProjectData.description}>{this.props.name}</a></h2>
-                    </ProjectInsightComp>
-                    <Link to="/">
-                        Back home
-                    </Link>
-                </Wrap>
-                <Particles 
-                params={{
-                        particles: {
-                            line_linked: {
-                                shadow: {
-                                    enable: true,
-                                    color: "black",
-                                    blur: 5
-                                }
-                            }
-                        }
-                    }}
-                style={{
-                    width: '100%',
-                    height:'100%',
-                    background: 'whitesmoke',
-                    position: 'absolute'
-                }}
-                />
-            </div>
-        )
+      const {
+        name,
+        description,
+        platform,
+        technologiesUsed,
+        whatDidILearn,
+        whatToImprove,
+        linkToProj
+      } = this.state.project;
+      console.log(this.state.project);
+      return (
+        <Fragment>
+          {this.state.loading ? (
+            <LoadingIcon />
+          ) : (
+            <Wrap>
+              <ProjectInsightComp>
+                <h1>{name}</h1>
+                <h2>Description: {description}</h2>
+                <h2>Platform: {platform}</h2>
+                <h2>Technologies Used: {technologiesUsed}</h2>
+                 <h2>What Did I learn: {whatDidILearn}</h2> 
+                {/* <h2>What to improve: {whatToImprove}</h2> */}
+                {/* <h2>
+                  Link: <a href={linkToProj}>{name}</a>
+                </h2> */}
+              </ProjectInsightComp>
+              <Link to="/">Back home</Link>
+            </Wrap>
+          )}
+        </Fragment>
+      );
     }
-};
+  }
 
 
 const ProjectInsightComp = styled.div`
@@ -130,7 +65,6 @@ h1{
 
 `
 const Wrap = styled.div`
-height: 75%; 
 width: 80%;
 margin-top: 10px;
 margin-bottom: 10px;
@@ -139,8 +73,7 @@ margin-right: auto;
 background:hsl(0, 61%, 50%);
 border-radius: 10px;
 padding: 5px;
-position: absolute;
-z-index: 10;
+
 `
 
 

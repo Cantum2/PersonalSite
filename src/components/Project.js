@@ -3,57 +3,30 @@ import styled from "styled-components";
 import  {Router, Link} from "@reach/router";
 import ProjectInsight from "./ProjectInsight";
 
-let projectsArr = [
-  {
-    name: "Tapt",
-    platform: "Android",
-    technologiesUsed: "Java, Android SDK",
-    description:
-      "Tapt was a game for Android that the goal was to click a ball that randomly moves around the screen. Upon clicking the user was awarded points which could be spent in the in game store."
-  },
-  {
-    name: "Fitter",
-    platform: "Web Applicaiton",
-    technologiesUsed: "AngularJS, NodeJS, Express, Firebase",
-    description: "Social media platform"
-  },
-  {
-    name: "WyoHackathon 2018",
-    platform: "Web Application and Blockchain",
-    technologiesUsed: "AngularJS, TCR, TCR-UI, Git, NodeJS, Express ",
-    description: "Social media platform"
-  },
-  {
-    name: "This website",
-    platform: "Website",
-    technologiesUsed: "React",
-    description: "Portfolio website."
-  }
-];
-
-
 export default class Project extends Component {
   openProjectDetail = key => {
     console.log("Button working:" + key);
   };
 
   render() {
+    const { projects } = this.props;
+
     return (
       <Fragment>
         <FlexContainer>
-            {projectsArr.map(proj => (
-              <ProjectsCard
-                  key={proj.name}
-                  onClick={() => this.openProjectDetail(proj.name)}
-                >
-              <Link to={"/project-insight/" + proj.name}>
-                  <p>{proj.name}</p>
-                  <p>{proj.platform}</p>
-                  <p>Technologies Used: {proj.technologiesUsed}</p>
-                  <p>{proj.description}</p>
+          {projects.map(proj => (
+            <ProjectsCard
+              key={proj.name}
+              onClick={() => this.openProjectDetail(proj.name)}
+            >
+              <Link to={`/project-insight/${proj.name}`}>
+                <p>{proj.name}</p>
+                <p>{proj.platform}</p>
+                <p>Technologies Used: {proj.technologiesUsed}</p>
+                <p>{proj.description}</p>
               </Link>
-                </ProjectsCard>
-            ))}         
+            </ProjectsCard>
+          ))}
         </FlexContainer>
       </Fragment>
     );

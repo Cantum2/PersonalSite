@@ -38,7 +38,7 @@ import ProjectInsight from "./ProjectInsight";
         technologiesUsed: "React",
         description: "Portfolio website.",
         whatDidILearn: "With this project I learned the basics of React.",
-        whatToImprove: "I would improve the UI design as that is one of my biggest weeknesses."
+        whatToImprove: "I would improve the UI design as that is one of my biggest weaknesses."
       }
     ]
   };

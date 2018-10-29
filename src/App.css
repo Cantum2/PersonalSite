@@ -18,3 +18,10 @@ body {
     margin-top: 10px
 }
 
+.projectLink{
+    color: blue;
+    text-decoration: none;
+}
+.projectLink:hover{
+    text-decoration: none;
+}

@@ -2,6 +2,7 @@ import React, { Fragment, Component } from "react";
 import styled from "styled-components";
 import  {Router, Link} from "@reach/router";
 import ProjectInsight from "./ProjectInsight";
+import "../App.css";
 
 export default class Project extends Component {
   openProjectDetail = key => {
@@ -19,7 +20,7 @@ export default class Project extends Component {
               key={proj.name}
               onClick={() => this.openProjectDetail(proj.name)}
             >
-              <Link to={`/project-insight/${proj.name}`}>
+              <Link className="projectLink" to={`/project-insight/${proj.name}`}>
                 <p>{proj.name}</p>
                 <p>{proj.platform}</p>
                 <p>Technologies Used: {proj.technologiesUsed}</p>
@@ -48,7 +49,7 @@ export const FlexContainer = styled.div`
 
 const ProjectsCard = styled.div`
   width: 20%;
-  height: 200px;
+  height: auto;
   grid-area: project;
   border-radius: 5px;
   background-color: hsl(0, 61%, 50%);

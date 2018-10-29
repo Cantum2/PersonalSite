@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export default styled.div`
 width: 250px;
-height: 400px;
+height: 500px;
 border-radius: 25px;
 background-color: red;
 display: inline-block;

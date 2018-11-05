@@ -48,13 +48,8 @@ const Skills = () => (
       <img src="../../Images/JavaLogo.jpg"></img>
       <img src="../../Images/JavaScriptLogo.jpg"></img>
       <img src="../../Images/PythonLogo.png"></img>
+      <img src="../../Images/PythonLogo.png"></img>
     </SkillsWrapper>
-    {/* <div>
-            <HorizontalBar data={programmingLanguageData} key="programmingData"/>
-        </div>
-        <div className="marginTop">
-             <HorizontalBar data={technologiesData} key="technologiesData"/>
-        </div> */}
   </SkillsContainer>
 );
 

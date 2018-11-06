@@ -48,7 +48,7 @@ const Skills = () => (
       <img src="../../Images/JavaLogo.jpg"></img>
       <img src="../../Images/JavaScriptLogo.jpg"></img>
       <img src="../../Images/PythonLogo.png"></img>
-      <img src="../../Images/PythonLogo.png"></img>
+      <img src="../../Images/HTMLLogo.png"></img>
     </SkillsWrapper>
   </SkillsContainer>
 );

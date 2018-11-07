@@ -45,10 +45,13 @@ const Skills = () => (
   <SkillsContainer>
     <h1>Skills</h1>
     <SkillsWrapper>
-      <img src="../../Images/JavaLogo.jpg"></img>
-      <img src="../../Images/JavaScriptLogo.jpg"></img>
-      <img src="../../Images/PythonLogo.png"></img>
-      <img src="../../Images/HTMLLogo.png"></img>
+      <img src="../../Images/Skills/JavaLogo.jpg"></img>
+      <img src="../../Images/Skills/JSLogo.png"></img>
+      <img src="../../Images/Skills/PythonLogo.png"></img>
+      <img src="../../Images/Skills/HTMLLogo.png"></img>
+      <img src="../../Images/Skills/CSSLogo.png"></img>
+      <img src="../../Images/Skills/MatlabLogo.png"></img>
+      <img src="../../Images/Skills/MySqlLogo.png"></img>
     </SkillsWrapper>
     <h1>Technologies</h1>
     <SkillsWrapper>

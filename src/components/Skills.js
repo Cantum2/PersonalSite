@@ -43,7 +43,7 @@ const technologiesData = {
 
 const Skills = () => (
   <SkillsContainer>
-    <h1>Skills</h1>
+    <h1>Languages</h1>
     <SkillsWrapper>
       <img src="../../Images/Skills/JavaLogo.jpg"></img>
       <img src="../../Images/Skills/JSLogo.png"></img>
@@ -58,7 +58,9 @@ const Skills = () => (
       <img src="../../Images/Technologies/AngularJSLogo.png"></img>
       <img src="../../Images/Technologies/ReactLogo.png"></img>
       <img src="../../Images/Technologies/NodeJSLogo.png"></img>
-
+      <img src="../../Images/Technologies/SpringBootLogo.png"></img>
+      <img src="../../Images/Technologies/AndroidLogo.png"></img>
+      <img src="../../Images/Technologies/FirebaseLogo.jpg"></img>
     </SkillsWrapper>
   </SkillsContainer>
 );
@@ -70,15 +72,6 @@ const SkillsContainer = styled.div`
   padding: 1.5em;
   background: hsl(0, 61%, 50%);
   color: whitesmoke;
-  /* div{
-    background-color: whitesmoke;
-    border-radius: 10px;
-    height: 50%;
-    width: 75%;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-} */
 `;
 
 const SkillsWrapper = styled.div`

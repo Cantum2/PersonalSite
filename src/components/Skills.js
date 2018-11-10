@@ -76,7 +76,7 @@ const SkillsContainer = styled.div`
 
 const SkillsWrapper = styled.div`
   width: 80%;
-  height: 20%;
+  height: 25%;
   margin-top: 10px;
   background-color: whitesmoke;
   border-radius: 40px;
